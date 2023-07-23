@@ -13,16 +13,17 @@ const MessageBox = () => {
 
 
     return (
-        <div style={{ marginTop: 130, textAlign: 'center', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-            <h5 className='mt-lg-5 text-danger font-weight-bold, mb-4'>WE DELIVER THE RIGHT MESSAGE, TO THE RIGHT AUDIENCE, AT THE RIGHT TIME </h5>
+        <div className='d-flex flex-column justify-content-center align-items-center text-centre' style={{ marginTop: 130 }}>
+            <div style={{ textAlign: 'center', width: "50%" }} >
+                <h5 className='mt-lg-5 text-danger font-weight-bold, mb-4'>WE DELIVER THE RIGHT MESSAGE, TO THE RIGHT AUDIENCE, AT THE RIGHT TIME </h5>
+                <p className='text-muted' >
+                    Bud plans your email marketing campaigns to offer many advantages benefitting your
+                    business. Studies state that around 83% of consumers engage better through effective email
+                    campaigns. Our holistic email marketing services assure the following benefits:
+                </p>
+            </div>
 
-            <p className='text-muted' >
-                Bud plans your email marketing campaigns to offer many advantages benefitting your
-                business. Studies state that around 83% of consumers engage better through effective email
-                campaigns. Our holistic email marketing services assure the following benefits:
-            </p>
-
-            <div style={{ display: 'flex', marginLeft: 10 ,flexWrap: 'wrap'}}>
+            <div style={{ display: 'flex', marginLeft: 10, flexWrap: 'wrap' }}>
                 {
                     messageCard.map((elem, i) => {
                         return (
