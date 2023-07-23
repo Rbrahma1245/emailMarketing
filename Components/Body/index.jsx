@@ -1,14 +1,17 @@
 import React from 'react'
-import MidBody from './MidBody'
+import Message from './Message'
 import MessageHeader from './MessageHeader'
 import MessageBox from './MessageBox'
+import MessageFooter from './MessageFooter'
 
 const Body = () => {
   return (
     <div>
-        <MidBody />
+        <Message />
         <MessageHeader />
         <MessageBox />
+        <MessageFooter />
+
     </div>
   )
 }

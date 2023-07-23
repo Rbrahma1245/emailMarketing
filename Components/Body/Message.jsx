@@ -1,7 +1,7 @@
 import React from 'react'
 import Group_1621 from '../../Images/Group_1621.png'
 
-const MidBody = () => {
+const Message = () => {
 
 
     let text = [
@@ -32,4 +32,4 @@ const MidBody = () => {
     )
 }
 
-export default MidBody
+export default Message

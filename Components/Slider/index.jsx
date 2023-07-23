@@ -2,17 +2,10 @@ import React from 'react'
 import ScrollCard from './ScrollCard'
 
 
-
-
-
 const Slider = () => {
   return (
     <div>
-        SLIDER
-        <ScrollCard />
-        
-      
-        
+        <ScrollCard />     
     </div>
   )
 }
