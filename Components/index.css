@@ -1,3 +1,9 @@
 .submit:hover{
     background-color: rgb(204, 184, 184);
 }
+
+a:hover {
+   color: red;
+   cursor: pointer;
+  }
+

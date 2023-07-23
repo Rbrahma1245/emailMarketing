@@ -23,7 +23,7 @@ const MessageBox = () => {
                 </p>
             </div>
 
-            <div style={{ display: 'flex', marginLeft: 10, flexWrap: 'wrap' }}>
+            <div className='d-flex flex-row justify-content-center align-items-center text-centre' style={{ display: 'flex', marginLeft: 10, flexWrap: 'wrap' }}>
                 {
                     messageCard.map((elem, i) => {
                         return (

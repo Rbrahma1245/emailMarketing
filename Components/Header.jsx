@@ -1,17 +1,18 @@
 import React from 'react'
 import './index.css'
+import logo from '../Images/logo.png'
 
 const Header = () => {
   return (
-    <div style={{backgroundColor:"#393636"}}>
+    <div style={{backgroundColor:"#131313"}}>
 
       <nav className="navbar navbar-expand-lg " style={{fontSize:12}}>
-        <a className="navbar-brand text-white" href="#">Navbar</a>
+        <img src={logo} style={{width:"200px", height:"40px", paddingLeft:"5%"}}/>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
-          <div className="navbar-nav">
+          <div className="navbar-nav" style={{marginLeft:'35%'}}>
             <a className="nav-item nav-link text-white" href="#">HOME</a>
             <a className="nav-item nav-link text-white" href="#">KNOW US</a>
             <a className="nav-item nav-link text-white" href="#">SERVICES</a>
