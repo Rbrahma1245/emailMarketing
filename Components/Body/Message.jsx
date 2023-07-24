@@ -11,11 +11,11 @@ const Message = () => {
     ]
     return (
         <div className='d-flex p-5' style={{backgroundColor:"#EBE8E8"}}>
-            <div className='ml-5 w-75' >
-                <img src={Group_1621} width="250px" height="300px"  />
+            <div className=' ' style={{width:"90%", textAlign:'center'}} >
+                <img src={Group_1621}  style={{width:"60%", height:"80%"}}  />
             </div>
 
-            <div >
+            <div>
                 <h5 className='mt-2 text-danger'>IF SOCIAL MEDIA IS FOR REACH, EMAIL MARKETING IS  </h5>
                 <h5 className='mt-2 text-danger'>FOR REVENUE</h5>
                 {

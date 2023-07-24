@@ -28,17 +28,16 @@ const ScrollCard = () => {
   return (
     <div >
       <div>
-
         <div className='d-flex flex-row justify-content-center align-items-center text-centre'
           style={{ backgroundImage: `url(${color})`, paddingTop: 50 }}>
           <div style={{ width: "100%" }}>
-            <img src={img} style={{ width: "60%", height: "10%", marginLeft: "40%" }} />
+            <img src={img} style={styles.imageDesign} />
           </div>
 
-          <div style={{ marginLeft: "15%", color: "white" }}>
+          <div style={styles.textContainer}>
             <h5>OUR CUTTING-EDGE EMAIL MARKETING CAMPAIGNS</h5>
             <h5 className='mt-3'>Welcome Email Series</h5>
-            <p style={{ margin: "20px 0px 120px", color: "white", width: "80%" }}>
+            <p style={styles.text3}>
               {
                 displayCard?.id ? <div style={{ width: '80%' }}>
                   <p>{displayCard?.desc}</p>
@@ -53,16 +52,16 @@ const ScrollCard = () => {
         </div>
 
         <div className='d-flex flex-row justify-content-center align-items-center text-centre'>
-          <h5 style={{ padding: 10, width: "40%", margin: "20px 0px", textAlign: "center", color: "#D63F35" }}>OPTIMIZE YOUR CAMPAIGNS WITH BUD'S EMAIL MARKETING STRATEGIES</h5>
+          <h5 style={styles.title}>OPTIMIZE YOUR CAMPAIGNS WITH BUD'S EMAIL MARKETING STRATEGIES</h5>
         </div>
 
-        <div className='d-flex  justify-content-center align-items-center text-centre mt-3 mb-5' >
+        <div className='d-flex flex-row justify-content-center align-items-center text-centre' style={styles.box}>
           {
             ScrollCardList.map((elem, i) => {
               return (
-                <div key={i} style={{ width: "90%", marginLeft: 5 }}>
-                  <div>
-                    <textarea rows="10" cols="16" style={{ textAlign: 'center', padding: 5, outline: 'none', resize: 'none' }} onClick={() => setDisplayCard(elem)}>
+                <div className="card " style={styles.cardContainer} key={i}>
+                  <div className="card-body " style={styles.cardBody}>
+                    <textarea rows="10" style={styles.textArea} onClick={() => setDisplayCard(elem)}>
                       {
                         displayCard?.id ? elem.desc : elem.title
                       }
@@ -72,10 +71,12 @@ const ScrollCard = () => {
               )
             })
           }
+
         </div>
+
       </div>
 
-      <div className='d-flex flex-column justify-content-center align-items-center text-centre ' style={{ backgroundImage: `url(${color})` }}>
+      <div className='d-flex flex-column justify-content-center align-items-center text-centre mt-5 ' style={{ backgroundImage: `url(${color})` }}>
         <div style={styles.textDecoration}>
           <p > {text1}</p>
           <p > {text2}</p>
@@ -95,6 +96,43 @@ let styles = {
     margin: "50px 0px 30px",
     textAlign: 'center'
   },
+textContainer:{ marginLeft: "15%", color: "white" },
+  imageDesign:{width: "60%", height: "10%", marginLeft: "40%"  },
+  text3:{margin: "20px 0px 120px", color: "white", width: "80%"},
+  title: {
+    padding: 10,
+    width: "40%",
+    margin: "20px 0px",
+    textAlign: "center",
+    color: "#D63F35"
+  },
+
+  textArea: {
+    textAlign: 'center',
+    width: "100%",
+    outline: 'none',
+    resize: 'none',
+    border: "none"
+
+  },
+  box: {
+    display: 'flex',
+    marginTop: "1rem",
+    flexWrap: 'wrap'
+  },
+  cardContainer: {
+    width: "28%",
+    boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+    border: "none",
+    margin: "0.5rem"
+  },
+  cardBody: {
+    textAlign: 'center',
+    padding: "0.5rem",
+    border: "none"
+  },
+
+
 
 
 }

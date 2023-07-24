@@ -4,7 +4,6 @@ import task from "../../Images/task.png"
 import illustration from "../../Images/illustration.png"
 import engineering from "../../Images/engineering.png"
 import funding from "../../Images/funding.png"
-import back from "../../Images/back.png"
 
 const MessageFooter = () => {
 
@@ -66,7 +65,7 @@ let styles = {
         padding: 10,
         width: "70%",
         color: "white",
-        margin: "40px 0px 30px",
+        margin: "2% 0px 30px",
         textAlign: 'center'
     },
 

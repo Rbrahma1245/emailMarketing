@@ -12,23 +12,26 @@ const MessageHeader = () => {
 
 
     return (
-        <div style={container}>
+        <div style={styles.container}>
 
             <h5 className='pt-5'>QUALITY VS QUANTITY, WE TRADE OFF THE RIGHT WAY!</h5>
 
-            <div style={{  display:'flex' , marginLeft:10}}>
-            {
-                cardText.map((elem, i) => {
-                    return (
-                        <div className="card " key={i}>
-                            <div className="card-body ">
-                                <p className="card-text bg-light text-dark p-5">{elem}</p>
+            <div className='d-flex flex-row justify-content-center align-items-center text-centre wrap' style={styles.box}>
+                {
+                    cardText.map((elem, i) => {
+                        return (
+                            <div className="card " style={styles.cardContainer} key={i}>
+                                <div className="card-body " style={styles.cardBody}>
+                                    <p className="card-text bg-light text-dark p-5">{elem}</p>
+
+                                </div>
                             </div>
-                        </div>
-                    )
-                })
-            }
-             </div>
+                        )
+                    })
+                }
+
+            </div>
+
 
 
         </div>
@@ -36,13 +39,39 @@ const MessageHeader = () => {
 }
 
 
-let container = {
-    backgroundImage: `url(${color})`,
-    width: "100%",
-    height: "300px",
-    textAlign: "center",
-    color: 'white',
-  
+let styles = {
+    container: {
+        backgroundImage: `url(${color})`,
+        width: "100%",
+        height: "300px",
+        textAlign: "center",
+        color: 'white',
+      
+    },
+
+    box: {
+        display: 'flex',
+        marginTop: "1rem",
+        flexWrap: 'wrap',
+        height:"100%"
+       
+
+      },
+      cardContainer: {
+        width: "28%",
+        border: "none",
+        margin: "2rem 0.5rem",
+        height:"100%"
+
+      },
+      cardBody: {
+        textAlign: 'center',
+        padding: "0.5rem",
+        border: "none",
+       
+       
+      },
+
 
 }
 export default MessageHeader

@@ -20,7 +20,7 @@ const MessageBox = () => {
 
 
     return (
-        <div className='d-flex flex-column justify-content-center align-items-center text-centre' style={{ marginTop: 130 }}>
+        <div className='d-flex flex-column justify-content-center align-items-center text-centre' style={{ marginTop: "16%" }}>
             <div style={{ textAlign: 'center', width: "50%" }} >
                 <h5 className='mt-lg-5 text-danger font-weight-bold, mb-4'>WE DELIVER THE RIGHT MESSAGE, TO THE RIGHT AUDIENCE, AT THE RIGHT TIME </h5>
                 <p className='text-muted' >
