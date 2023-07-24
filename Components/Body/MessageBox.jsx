@@ -34,20 +34,19 @@ const MessageBox = () => {
                 {
                     messageCard.map((elem, i) => {
                         return (
-                            <div className="card " style={{ width: "25%", margin: "0.5%", border: "1px solid black" }} key={i}>
+                            <div className="card " style={{ width: "25%", margin: "0.5%", }} key={i}>
 
-                                <div className="card-body " style={{  textAlign:'center' }}>
-                                    <img src={back} width="80%" />
+                                <div className="card-body " style={{  textAlign:'center' , }}>
+                                    <img src={back} width="80%"  />
                                     <p className='text-muted' style={styles.cardContainer}>{elem.title}</p>
-                                    <img src={front} width="80%" style={{ marginTop: "-60%", zIndex: 1 }} />
+                                    <img src={front} width="80%" style={{ marginTop: "-80%", position:'relative', zIndex:3 }} />
 
                                 </div>
 
                             </div>
                         )
                     })
-                }
-                
+                }        
             </div>
 
 
@@ -61,14 +60,16 @@ const MessageBox = () => {
 
 let styles = {
     cardContainer: {
-        marginLeft: "15%",
-        position: "absolute",
+        marginLeft: "18%",
+        position: "relative",
         textAlign: "center",
+        zIndex:1,
+        padding:20,
         
         marginTop: "-38%",
         marginBottom: "30%",
         width: "60% ",
-        height: "40%",
+        height: "8rem",
         backgroundColor: "#ffffff",
         fontSize: "12px"
     }

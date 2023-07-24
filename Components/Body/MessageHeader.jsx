@@ -22,7 +22,7 @@ const MessageHeader = () => {
                         return (
                             <div className="card " style={styles.cardContainer} key={i}>
                                 <div className="card-body " style={styles.cardBody}>
-                                    <p className="card-text bg-light text-dark p-5">{elem}</p>
+                                    <p className="card-text bg-light text-dark p-5">{elem.slice(0,350)}...</p>
 
                                 </div>
                             </div>
@@ -68,6 +68,7 @@ let styles = {
         textAlign: 'center',
         padding: "0.5rem",
         border: "none",
+        height:"300px"
        
        
       },
