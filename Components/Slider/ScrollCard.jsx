@@ -3,8 +3,6 @@ import color from "../../Images/color.jpg"
 import img from "../../Images/Group_1627.png"
 
 
-
-
 const ScrollCard = () => {
 
   let [displayCard, setDisplayCard] = useState()
@@ -30,7 +28,7 @@ const ScrollCard = () => {
       <div>
         <div className='d-flex flex-row justify-content-center align-items-center text-centre'
           style={{ backgroundImage: `url(${color})`, paddingTop: 50 }}>
-          <div style={{ width: "100%" }}>
+          <div style={{ width: "100%", marginLeft: '5rem' }}>
             <img src={img} style={styles.imageDesign} />
           </div>
 
@@ -38,15 +36,70 @@ const ScrollCard = () => {
             <h5>OUR CUTTING-EDGE EMAIL MARKETING CAMPAIGNS</h5>
             <h5 className='mt-3'>Welcome Email Series</h5>
             <p style={styles.text3}>
-              {
-                displayCard?.id ? <div style={{ width: '80%' }}>
-                  <p>{displayCard?.desc}</p>
-                </div>
-                  :
-                  <div>
-                    <p> {ScrollCardList[0].desc}</p>
+              
+
+              <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
+
+                <div className="carousel-inner">
+                  <div className="carousel-item active" data-bs-interval="10000">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[0].desc}</p>
+                    </div>
                   </div>
-              }
+                  <div className="carousel-item" data-bs-interval="4000">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[1].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[2].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[3].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[4].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[5].desc}</p>
+                    </div>
+                  </div>
+
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[6].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[7].desc}</p>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div style={{ margin: '0rem 10rem' }}>
+                      <p>{ScrollCardList[8].desc}</p>
+                    </div>
+                  </div>
+
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
+              </div>
+
+
             </p>
           </div>
         </div>
@@ -96,9 +149,9 @@ let styles = {
     margin: "50px 0px 30px",
     textAlign: 'center'
   },
-textContainer:{ marginLeft: "15%", color: "white" },
-  imageDesign:{width: "60%", height: "10%", marginLeft: "40%"  },
-  text3:{margin: "20px 0px 120px", color: "white", width: "80%"},
+  textContainer: { marginLeft: "1%", color: "white" },
+  imageDesign: { height: "15rem" },
+  text3: { margin: "20px 0px 120px", color: "white", width: "80%" },
   title: {
     padding: 10,
     width: "40%",

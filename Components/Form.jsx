@@ -33,8 +33,7 @@ const Form = () => {
 
 
     return (
-        <div style={styles.formContainer} >
-
+        <div style={styles.formContainer} className='col-4 p-2 mb-2' >
 
             <h6 className='text-white mt-3 pb-2'>GET IN TOUCH WITH US</h6>
 
@@ -57,12 +56,12 @@ const Form = () => {
 let styles = {
     formContainer: {
         marginTop: 50,
-        backgroundImage: `url(${color2})`,
-        width: "25%",
+        backgroundImage: `url(${color2})`,    
         backgroundSize: '100% 100%',
         borderRadius: 10,
         padding: "30px",
-        textAlign: 'center'
+        textAlign: 'center',
+        height:'80%'
     },
 
     input: {
@@ -71,7 +70,7 @@ let styles = {
         marginBottom: 10,
         padding: 5,
         paddingLeft: 10,
-        width: '100%',
+        width: '90%',
         border: 'none',
         outline: 'none',
         opacity: 0.5,
@@ -82,6 +81,7 @@ let styles = {
         borderRadius: 7,
         color: '#E54E82',
         padding: '6px 30px', 
+        width: '50%',  
         cursor: 'pointer',
         textAlign:'center',
         marginTop: 10,

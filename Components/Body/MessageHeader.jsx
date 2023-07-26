@@ -16,24 +16,20 @@ const MessageHeader = () => {
 
             <h5 className='pt-5'>QUALITY VS QUANTITY, WE TRADE OFF THE RIGHT WAY!</h5>
 
-            <div className='d-flex flex-row justify-content-center align-items-center text-centre wrap' style={styles.box}>
+            <div className='d-flex justify-content-center align-items-center text-centre' style={styles.box}>
                 {
                     cardText.map((elem, i) => {
                         return (
                             <div className="card " style={styles.cardContainer} key={i}>
-                                <div className="card-body " style={styles.cardBody}>
-                                    <p className="card-text bg-light text-dark p-5">{elem.slice(0,350)}...</p>
+                                <div className="card-body" style={styles.cardBody}>
+                                    <p className="card-text bg-light text-dark p-5 " style={{height:"25rem"}}>{elem}</p>
 
                                 </div>
                             </div>
                         )
                     })
                 }
-
             </div>
-
-
-
         </div>
     )
 }
@@ -46,32 +42,21 @@ let styles = {
         height: "300px",
         textAlign: "center",
         color: 'white',
-      
     },
 
     box: {
         display: 'flex',
         marginTop: "1rem",
         flexWrap: 'wrap',
-        height:"100%"
-       
-
-      },
-      cardContainer: {
+    },
+    cardContainer: {
         width: "28%",
-        border: "none",
-        margin: "2rem 0.5rem",
-        height:"100%"
-
-      },
-      cardBody: {
+    },
+    cardBody: {
         textAlign: 'center',
-        padding: "0.5rem",
         border: "none",
-        height:"300px"
-       
-       
-      },
+        height: "300px",
+    },
 
 
 }
